@@ -118,8 +118,8 @@
 		7C6723102991799400FA6B6D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7C672313299185A000FA6B6D /* CityDetailVC.swift */,
 				7C021CF62992B3C800A6FE1F /* CityListTableVC.swift */,
+				7C672313299185A000FA6B6D /* CityDetailVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
