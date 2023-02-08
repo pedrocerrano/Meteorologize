@@ -25,14 +25,21 @@ class CityDetailVC: UIViewController {
 	// MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
 		updateViews()
     } //: LIFECYCLE
 
     
     //MARK: - ACTIONS
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let city = objectToReceiveData,
+              let newName = cityNameTextField.text, !newName.isEmpty,
+              let newTemp = cityTempTextField.text, !newTemp.isEmpty else { return }
         
+        CityController.sharedInstance.updateCity(cityToUpdate: city, newName: newName, newTemp: Double(newTemp) ?? 0)
+        
+        navigationController?.popViewController(animated: true)
     } //: SAVE BUTTON
     
     

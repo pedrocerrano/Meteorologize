@@ -18,7 +18,13 @@ class CityListTableVC: UITableViewController {
 	// MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-    } //: LIFECYCLE
+    } //: DidLoad
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    } //: WillAppear
 
     
 	// MARK: - ACTIONS
