@@ -36,8 +36,8 @@ class CityDetailVC: UIViewController {
 		cityNameLabel.text          = city.name
 		currentStatusLabel.text     = city.currentStatus
 		currentTempLabel.text       = "Current Temp: \(city.currentTemp)°F"
-		projectedHighLabel.text     = "High: \(city.dailyHigh)°F"
-		projectedLowLabel.text      = "Low: \(city.dailyLow)°F"
+        projectedHighLabel.text     = "High: \(city.dailyHigh ?? 0)°F"
+		projectedLowLabel.text      = "Low: \(city.dailyLow ?? 0)°F"
 
 		self.view.backgroundColor = city.currentTemp <= 80.0 ? .systemPurple : .systemRed
 	} //: FUNC

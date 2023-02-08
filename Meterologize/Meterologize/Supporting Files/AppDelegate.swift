@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CityController.sharedInstance.createCity(name: "Dallas", temp: 61.2, high: 63, low: 45, status: "Rainy")
         CityController.sharedInstance.createCity(name: "Fort Worth", temp: 60.3, high: 62, low: 44, status: "Cloudy")
         CityController.sharedInstance.createCity(name: "Lubbock", temp: 44.5, high: 44, low: 33, status: "Heavy clouds")
-        CityController.sharedInstance.createCity(name: "Houston", temp: 73.8, high: 76, low: 65, status: "Light rain")
+        CityController.sharedInstance.createCity(name: "Houston", temp: 100, high: 1000, low: 65, status: "Feels like Hell")
         
 		return true
 	}
