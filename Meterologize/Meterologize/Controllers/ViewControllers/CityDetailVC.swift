@@ -47,9 +47,9 @@ class CityDetailVC: UIViewController {
 	func updateViews() {
         guard let city = objectToReceiveData else { return }
 
-        cityNameTextField.text          = city.name
+        cityNameTextField.text      = city.name
 		currentStatusLabel.text     = city.currentStatus
-		cityTempTextField.text       = "\(city.currentTemp)°F"
+		cityTempTextField.text      = "\(city.currentTemp)°F"
         projectedHighLabel.text     = "High: \(city.dailyHigh ?? 0)°F"
 		projectedLowLabel.text      = "Low: \(city.dailyLow ?? 0)°F"
 

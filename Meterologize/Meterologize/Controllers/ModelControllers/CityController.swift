@@ -23,10 +23,17 @@ class CityController {
 	} //: func CREATE
     
     
-    // If I want to update a City object, I need the new values for the properties, AND I need to know what CITY the user is trying to update
+    //MARK: - UPDATE
     func updateCity(cityToUpdate: City, newName: String, newTemp: Double) {
         cityToUpdate.name           = newName
         cityToUpdate.currentTemp    = newTemp
     } //: func UPDATE
+    
+    
+    //MARK: - DELETE
+    func deleteCity(cityToDelete city: City) {
+        guard let cityIndex = cities.firstIndex(of: city) else { return }
+        cities.remove(at: cityIndex)
+    } //: func DELETE
     
 } //: CLASS

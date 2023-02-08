@@ -40,6 +40,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYu-nx-XuT">
+                                <rect key="frame" x="283.66666666666669" y="292" width="38" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="iwl-4V-nYa">
                                 <rect key="frame" x="113.00000000000001" y="386" width="167.33333333333337" height="20.333333333333314"/>
                                 <subviews>
@@ -65,8 +71,11 @@
                             <constraint firstItem="iwl-4V-nYa" firstAttribute="centerX" secondItem="kdV-0H-cL3" secondAttribute="centerX" id="Ify-u7-cNA"/>
                             <constraint firstItem="jVP-Sq-gGJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J7u-su-ceV"/>
                             <constraint firstItem="kdV-0H-cL3" firstAttribute="top" secondItem="jVP-Sq-gGJ" secondAttribute="bottom" constant="10" id="LZ1-fS-qoK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LYu-nx-XuT" secondAttribute="trailing" symbolic="YES" id="RmZ-f8-u7Y"/>
+                            <constraint firstItem="LYu-nx-XuT" firstAttribute="leading" secondItem="kdV-0H-cL3" secondAttribute="trailing" constant="20" id="apw-9b-kGP"/>
                             <constraint firstItem="iwl-4V-nYa" firstAttribute="top" secondItem="kdV-0H-cL3" secondAttribute="bottom" constant="20" id="azf-Cf-zEm"/>
                             <constraint firstItem="jVP-Sq-gGJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="gio-3y-QRM"/>
+                            <constraint firstItem="LYu-nx-XuT" firstAttribute="centerY" secondItem="kdV-0H-cL3" secondAttribute="centerY" id="vcD-xx-vjo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wCg-Ym-frx">

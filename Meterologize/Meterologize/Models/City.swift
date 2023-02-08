@@ -14,6 +14,7 @@ class City {
 	let dailyHigh: Int?
 	let dailyLow: Int?
 	let currentStatus: String?
+    let uuid = UUID().uuidString
 
 	init(name: String, currentTemp: Double, dailyHigh: Int?, dailyLow: Int?, currentStatus: String?) {
 		self.name           = name
@@ -23,3 +24,11 @@ class City {
 		self.currentStatus  = currentStatus
 	}
 } //: CLASS
+
+
+extension City: Equatable {
+    static func == (lhs: City, rhs: City) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
+    
+} //: EXTENSION
