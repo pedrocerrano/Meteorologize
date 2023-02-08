@@ -1,5 +1,5 @@
 //
-//  CityDetailViewController.swift
+//  CityDetailVC.swift
 //  Meterologize
 //
 //  Created by Maxwell Poffenbarger on 2/6/23.
@@ -18,6 +18,10 @@ class CityDetailVC: UIViewController {
 	@IBOutlet weak var projectedLowLabel: UILabel!
 
     
+    //MARK: - PROPERTIES
+    var objectToReceiveData: City?
+    
+    
 	// MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +31,15 @@ class CityDetailVC: UIViewController {
 
 	// MARK: - METHODS
 	func updateViews() {
-//		let city = CityController.sharedInstance.cities[0]
-//
-//		cityNameLabel.text = city.name
-//		currentStatusLabel.text = city.currentStatus
-//		currentTempLabel.text = "\(city.currentTemp)°F"
-//		projectedHighLabel.text = "\(city.dailyHigh)°F"
-//		projectedLowLabel.text = "\(city.dailyLow)°F"
-//
-//		self.view.backgroundColor = city.currentTemp <= 80.0 ? .blue : .red
+        guard let city = objectToReceiveData else { return }
+
+		cityNameLabel.text          = city.name
+		currentStatusLabel.text     = city.currentStatus
+		currentTempLabel.text       = "Current Temp: \(city.currentTemp)°F"
+		projectedHighLabel.text     = "High: \(city.dailyHigh)°F"
+		projectedLowLabel.text      = "Low: \(city.dailyLow)°F"
+
+		self.view.backgroundColor = city.currentTemp <= 80.0 ? .systemPurple : .systemRed
 	} //: FUNC
     
 } //: CLASS

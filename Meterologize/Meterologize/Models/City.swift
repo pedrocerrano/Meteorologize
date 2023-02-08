@@ -21,4 +21,4 @@ class City {
 		self.dailyLow = dailyLow
 		self.currentStatus = currentStatus
 	}
-} // end of class
+} //: CLASS
