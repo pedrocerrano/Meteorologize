@@ -26,7 +26,7 @@ class CityDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.tintColor = UIColor.white
+        customizeTextAndColors()
 		updateViews()
     } //: LIFECYCLE
 
@@ -55,5 +55,17 @@ class CityDetailVC: UIViewController {
 
 		self.view.backgroundColor = city.currentTemp <= 80.0 ? .systemPurple : .systemRed
 	} //: func UPDATE
+    
+    
+    func customizeTextAndColors() {
+        cityNameTextField.font                          = UIFont.systemFont(ofSize: 40)
+        cityNameTextField.attributedPlaceholder         = NSAttributedString(string: "Enter City Name", attributes: [.font: UIFont.boldSystemFont(ofSize: 17)])
+        currentStatusLabel.textColor                    = .white
+        cityTempTextField.font                          = UIFont.systemFont(ofSize: 40)
+        cityTempTextField.attributedPlaceholder         = NSAttributedString(string: "Enter New Temp", attributes: [.font: UIFont.boldSystemFont(ofSize: 17)])
+        projectedHighLabel.textColor                    = .white
+        projectedLowLabel.textColor                     = .white
+        navigationController?.navigationBar.tintColor   = .white
+    } //: func TEXT and COLORS
     
 } //: CLASS
